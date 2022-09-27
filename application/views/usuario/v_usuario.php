@@ -37,8 +37,57 @@
                 </ol>
 
                 <!-- Page Content -->
-                <h1>Gesti&oacute;n de usuario</h1>
+				<div class="row">
+					<div class="col-lg-8">
+						<h1>Gesti&oacute;n de usuario</h1>
+					</div>
+					<div class="col-lg-4">
+						<button type="button" class="btn btn-success float-right">Agregar</button>
+					</div>
+				</div>
                 <hr>
+				<!-- DataTables Example -->
+				<div class="card mb-3">
+					<div class="card-header">
+						<i class="fas fa-table"></i>
+						Data Table Example</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+								<tr>
+									<th>C&oacute;digo</th>
+									<th>Nombre</th>
+									<th>Rol</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+								</thead>
+								<tfoot>
+								<tr>
+									<th>Codigo</th>
+									<th>Nombre</th>
+									<th>Rol</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+								</tfoot>
+								<tbody>
+								<tr>
+									<td>Donna Snider</td>
+									<td>Customer Support</td>
+									<td>New York</td>
+									<td>27</td>
+									<td>
+										<button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button>
+										<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
                 <p>This is a great starting point for new custom pages.</p>
 
             </div>

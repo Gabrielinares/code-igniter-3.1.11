@@ -42,7 +42,7 @@
 						<h1>Gesti&oacute;n de usuario</h1>
 					</div>
 					<div class="col-lg-4">
-						<button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".bd-example-modal-lg id="cargarForm">Agregar</button>
+						<button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".bd-example-modal-lg" id="cargarForm">Agregar</button>
 					</div>
 				</div>
                 <hr>
@@ -73,16 +73,27 @@
 								</tr>
 								</tfoot>
 								<tbody>
-								<tr>
-									<td>Donna Snider</td>
-									<td>Customer Support</td>
-									<td>New York</td>
-									<td>27</td>
-									<td>
-										<button type="button" class="btn btn-info"><i class="fas fa-edit"></i></button>
-										<button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-									</td>
-								</tr>
+								<?php foreach($usuarios as $row) {?>
+									<tr>
+										<td><?= $row->id; ?></td>
+										<td><?= $row->username; ?></td>
+										<td><?= $row->rol_id; ?></td>
+										<td>
+											<?php
+												$texto = "Inactivo";
+												if($row->estado == 1) {
+													$texto = "Activo";
+												}
+											?>
+											<?= $texto ?>
+										</td>
+										<td>
+											<button type="button" data-toggle="modal" data-target=".bd-example-modal-lg" id="" class="btn btn-info btnEditar" data-id="<?= $row->id ?>"><i class="fas fa-edit"></i></button>
+											<button type="button" id="" class="btn btn-danger btnEliminar" data-id="<?= $row->id ?>"><i class="fas fa-trash"></i></button>
+										</td>
+									</tr>
+								<?php } ?>
+
 								</tbody>
 							</table>
 						</div>
@@ -114,9 +125,9 @@
     </a>
 
     <?php
-    $this->load->view('layout/footer');
+    	$this->load->view('layout/footer');
     ?>
-
+	<script src="<?php echo base_url('resources/js/usuariojs/scripts.js') ?>"></script>
 </body>
 
 </html>

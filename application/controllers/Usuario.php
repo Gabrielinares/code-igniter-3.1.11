@@ -5,6 +5,7 @@ class Usuario extends Padre{
 
     function __construct(){
         parent::__construct();
+		$this->load->model('Usuario_m');
         //$this->load->helper('url');
     }
 
@@ -13,9 +14,19 @@ class Usuario extends Padre{
         $data['nombre'] = "ITCA";
         $data['showAdmin'] = "show";
         $data["activeUsuario"] = "active";
-        $this->load->view('usuario/v_usuario', $data);
+		$data['usuarios'] = $this->Usuario_m->get_Usuarios();
+		$this->load->view('usuario/v_usuario', $data);
     }
 
+	public function loadFormAdd(){
+		$data['rol'] = $this->Usuario_m->get_Rol();
+		$this->load->view('usuario/addUsuario', $data);
+	}
+
+	public function loadFormEdit($id){
+		$data['id'] = $id;
+		$this->load->view('usuario/editUsuario', $data);
+	}
 }
 
 ?>

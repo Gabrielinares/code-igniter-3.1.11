@@ -42,7 +42,7 @@
 						<h1>Gesti&oacute;n de usuario</h1>
 					</div>
 					<div class="col-lg-4">
-						<button type="button" class="btn btn-success float-right">Agregar</button>
+						<button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="bd-example-modal-lg">Agregar</button>
 					</div>
 				</div>
                 <hr>

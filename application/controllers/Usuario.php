@@ -25,6 +25,7 @@ class Usuario extends Padre{
 
 	public function loadFormEdit($id){
 		$data['id'] = $id;
+		$data['rol'] = $this->Usuario_m->get_Rol();
 		$this->load->view('usuario/editUsuario', $data);
 	}
 }

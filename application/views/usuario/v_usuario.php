@@ -50,7 +50,8 @@
 				<div class="card mb-3">
 					<div class="card-header">
 						<i class="fas fa-table"></i>
-						Data Table Example</div>
+						Data Table Example
+					</div>
 					<div class="card-body">
 						<div class="table-responsive">
 							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -72,27 +73,7 @@
 									<th>Acciones</th>
 								</tr>
 								</tfoot>
-								<tbody>
-								<?php foreach($usuarios as $row) {?>
-									<tr>
-										<td><?= $row->id; ?></td>
-										<td><?= $row->username; ?></td>
-										<td><?= $row->rol_id; ?></td>
-										<td>
-											<?php
-												$texto = "Inactivo";
-												if($row->estado == 1) {
-													$texto = "Activo";
-												}
-											?>
-											<?= $texto ?>
-										</td>
-										<td>
-											<button type="button" data-toggle="modal" data-target=".bd-example-modal-lg" id="" class="btn btn-info btnEditar" data-id="<?= $row->id ?>"><i class="fas fa-edit"></i></button>
-											<button type="button" id="" class="btn btn-danger btnEliminar" data-id="<?= $row->id ?>"><i class="fas fa-trash"></i></button>
-										</td>
-									</tr>
-								<?php } ?>
+								<tbody id="construirTabla">
 
 								</tbody>
 							</table>

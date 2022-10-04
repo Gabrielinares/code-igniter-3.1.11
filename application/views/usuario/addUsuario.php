@@ -1,4 +1,4 @@
-<form action="" id="frmAddUser">
+<form action="usuario/guardarRegistro" id="frmAddUser">
 	<div class="row">
 		<div class="col-lg-6">
 			<label for="txtUsuario">Usuario: </label>
@@ -24,7 +24,7 @@
 	<br>
 	<div class="row">
 		<div class="col-lg-6">
-			<button type="button" class="btn btn-dark btn-block">Guardar</button>
+			<button type="submit" class="btn btn-dark btn-block">Guardar</button>
 		</div>
 		<div class="col-lg-6">
 			<button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>

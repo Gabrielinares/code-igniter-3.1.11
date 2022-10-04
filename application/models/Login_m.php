@@ -16,7 +16,7 @@ class Login_m extends CI_Model{
         $this->db->from('usuario u');
         $this->db->join('rol r', 'u.rol_id = r.id');
         $this->db->where('u.username', $user);
-        $this->db->where('u.password', $psw);
+        $this->db->where('u.password', $pass);
         $this->db->group_by(array('u.id'));
 
         $query = $this->db->get(); //ejecuta query

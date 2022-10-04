@@ -29,4 +29,5 @@
 
 <!-- Custom scripts for all pages-->
 <script src="<?php echo base_url('resources/js/sb-admin.min.js') ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.37/sweetalert2.min.js" integrity="sha512-hMhiMG2V37nTipBqREV4+PdbKWnM3qXH9JPcD4s+YC9FStVfOMAyPvZ5tWx/SacBtHjTSsVvx7lg6CBUox1ZEA=="></script>
 </div>

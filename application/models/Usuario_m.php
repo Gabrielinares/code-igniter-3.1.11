@@ -52,4 +52,8 @@ class Usuario_m extends CI_Model
 		$this->db->where('id', $id);
 		$this->db->delete('usuario');
 	}
+
+	public function cambiar_estado(){
+
+	}
 }

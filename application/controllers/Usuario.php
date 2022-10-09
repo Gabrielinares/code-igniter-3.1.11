@@ -49,7 +49,7 @@ class Usuario extends Padre{
                           <button type="button" data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-info btnEditar" data-id="'.$row->id.'">
                             <i class="fas fa-edit"></i>
                           </button>
-                          <button type="button" class="btn btn-danger btnEliminar" data-id="'.$row->id.'">
+                          <button type="submit" class="btn btn-danger btnEliminar" data-id="'.$row->id.'">
                             <i class="fas fa-trash"></i>
                           </button>
                         </td>
@@ -93,12 +93,15 @@ class Usuario extends Padre{
 
 		$affected = $this->Usuario_m->edit_usuario($where, $datos);
 
-		$data = array('msj' => "Registrado Actualizado");
+		$data = array('msj' => "Registro Actualizado");
 		echo json_encode($data);
 	}
 
 	public function eliminarRegistro(){
-
+		$id = $this->input->post("idUser");
+		$this->Usuario_m->delete_by_id($id);
+		$data = array('mensaje' => "El registro fue eliminado");
+		echo json_encode($data);
 	}
 }
 

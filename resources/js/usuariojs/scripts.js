@@ -22,7 +22,14 @@ function send_data_controller(frm, action){
 		data: frm.serializeArray(),
 	})
 		.done( function (data)  {
-			alert(data.msj);
+			//alert(data.msj);
+			Swal.fire({
+				position: 'top-center',
+				icon: 'success',
+				title: data.msj,
+				showConfirmButton: false,
+				timer: 3000
+			})
 			$('.bd-example-modal-lg').modal('hide');
 			get_table_by_ajax();
 		})
@@ -31,7 +38,29 @@ function send_data_controller(frm, action){
 		});
 }
 
+function delete_ajax(id){
+	$.ajax({
+		url: 'usuario/eliminarRegistro',
+		type: 'POST',
+		dataType: 'json',
+		data: {idUser : id}
+	})
+		.done(function (data){
+			Swal.fire(
+				'Eliminado',
+				data.msj,
+				'success'
+			);
+			get_table_by_ajax();
+		})
+		.fail(function (){
+			console.log("Error")
+;		});
+}
+
 $(document).ready( () =>{
+
+	$('#dataTable').DataTable();
 
 	get_table_by_ajax();
 
@@ -61,6 +90,24 @@ $(document).ready( () =>{
 		frm = $(this);
 		act = $(this).attr('action');
 		send_data_controller(frm, act);
+	});
+
+	$(document).on('click', '.btnEliminar', function (event) {
+		id =$(this).attr('data-id');
+		Swal.fire({
+			title: 'Seguro que desea eliminar',
+			text: "No podra recuperar los registros",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Si, eliminar'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				delete_ajax(id);
+			}
+		})
+		console.log("Si");
 	});
 
 })

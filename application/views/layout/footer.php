@@ -30,4 +30,7 @@
 <!-- Custom scripts for all pages-->
 <script src="<?php echo base_url('resources/js/sb-admin.min.js') ?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.37/sweetalert2.min.js" integrity="sha512-hMhiMG2V37nTipBqREV4+PdbKWnM3qXH9JPcD4s+YC9FStVfOMAyPvZ5tWx/SacBtHjTSsVvx7lg6CBUox1ZEA=="></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.38/sweetalert2.all.min.js" integrity="sha512-Seif2uAXvJIyl61NjJSAr6yFQFE+DtMAPNeW99nWcSqYbC6sqvdx5yZZn9p49NZLX3bnV5imWv22P4cwtf0krg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
 </div>

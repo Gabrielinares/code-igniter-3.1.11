@@ -16,3 +16,5 @@
   <link href="<?php echo base_url('resources/css/sb-admin.css')?>" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.37/sweetalert2.min.css" integrity="sha512-r+ShOkTmhH/y+MOeQfVL1mW0dMcD/54nFOEmwn+gl4DCw9SAzWCqedtsefIy52x/amO1ZSsULwgDxU9BIdabqQ=="/>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">

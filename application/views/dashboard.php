@@ -103,6 +103,36 @@
           </div>
         </div>
 
+		<h1>Entregado por</h1>
+		  <table class="table table-bordered" width="100%" cellspacing="0">
+			  <thead>
+				  <th>Alumno</th>
+				  <th>Carnet</th>
+			  </thead>
+			  <tbody>
+			  	<tr>
+					<td>Nelson Gabriel Guevara Linares</td>
+					<td>195121</td>
+				</tr>
+			  <tr>
+				  <td>Manuel de Jes&uacute;s M&eacute;ndez Moreira</td>
+				  <td>202321</td>
+			  </tr>
+				<tr>
+					<td>Ra&uacute;l Alberto P&eacute;rez Hern&aacute;ndez</td>
+					<td>197321</td>
+				</tr>
+				<tr>
+					<td>Bryan Steven Ard&oacute;n Anaya</td>
+					<td>207121</td>
+				</tr>
+				<tr>
+					<td>C&eacute;sar Isaac Consuegra Amaya</td>
+					<td>207221</td>
+				</tr>
+			  </tbody>
+		  </table>
+
       </div>
       <!-- /.container-fluid -->
 

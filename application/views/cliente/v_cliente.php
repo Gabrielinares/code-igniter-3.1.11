@@ -39,6 +39,45 @@
                 <!-- Page Content -->
                 <h1>Gesti&oacute;n de clientes</h1>
                 <hr>
+
+				<!-- DataTables Example -->
+				<div class="card mb-3">
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+								<tr>
+									<th>C&oacute;digo</th>
+									<th>Nombres</th>
+									<th>Apellidos</th>
+									<th>Direccion</th>
+									<th>Telefono</th>
+									<th>Email</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+								</thead>
+								<tfoot>
+								<tr>
+									<th>C&oacute;digo</th>
+									<th>Nombres</th>
+									<th>Apellidos</th>
+									<th>Direccion</th>
+									<th>Telefono</th>
+									<th>Email</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+								</tfoot>
+								<tbody id="construirTabla">
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
                 <p>This is a great starting point for new custom pages.</p>
 
             </div>
@@ -67,7 +106,7 @@
     <?php
     $this->load->view('layout/footer');
     ?>
-
+	<script src="<?php echo base_url('resources/js/clientejs/script.js') ?>"></script>
 </body>
 
 </html>

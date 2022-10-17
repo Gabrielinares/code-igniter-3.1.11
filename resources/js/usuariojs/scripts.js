@@ -92,6 +92,11 @@ $(document).ready( () =>{
 		send_data_controller(frm, act);
 	});
 
+
+
+
+
+
 	$(document).on('click', '.btnEliminar', function (event) {
 		id =$(this).attr('data-id');
 		Swal.fire({

@@ -37,7 +37,15 @@
                 </ol>
 
                 <!-- Page Content -->
+                <div class="row">
+                    <div class="col-lg-8">
                 <h1>Gesti&oacute;n de clientes</h1>
+            </div>
+                <div class="col-lg-4">
+                        <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target=".bd-example-modal-lg" id="cargarForm">Agregar</button>
+                    </div>
+                </div>
+
                 <hr>
 
 				<!-- DataTables Example -->

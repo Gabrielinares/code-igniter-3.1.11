@@ -1,4 +1,4 @@
-<form action="usuario/guardarRegistro" id="frmAddUser">
+<form action="usuario/guardarRegistro" method="POST" id="frmAddUser">
 	<div class="row">
 		<div class="col-lg-6">
 			<label for="txtUsuario">Usuario: </label>

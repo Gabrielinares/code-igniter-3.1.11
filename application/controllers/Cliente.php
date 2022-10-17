@@ -52,6 +52,63 @@ class Cliente extends Padre{
 		echo json_encode(array('tabla' => $table));
 	}
 
+  public function loadFormAdd(){
+    $this->load->view('cliente/addCliente');
+  }
+
+  /*Eliminar Cliente*/
+  public function eliminarRegistro(){
+		$id = $this->input->post("idUser");
+	$this->Cliente_m->delete_by_id($id);
+		$data = array('mensaje' => "El registro fue eliminado");
+		echo json_encode($data);
+	}
+
+  public function loadFormEdit($id){
+    $data['cliente'] = $this->Cliente_m->get_by_id($id);
+    $this->load->view('cliente/editCliente', $data);
+  }
+
+
+
+public function actualizarRegistro(){
+    //Aplicar los campos del cliente siguiendo la logica de el array
+    $datos = array('nombres' => $this->input->post('nombres'),
+      'apellidos' => $this->input->post('apellidos'),
+      'direccion' => $this->input->post('direccion'),
+      'telefono' => $this->input->post('telefono'),
+      'email' => $this->input->post('email'),
+      'estado' => $this->input->post('estado')
+    );
+
+    $where = array('id' => $this->input->post('id'));
+
+    $affected = $this->Cliente_m->edit_Clientes($where, $datos);
+
+    $data = array('msj' => "Registro Actualizado");
+    echo json_encode($data);
+  }
+
+public function agregarRegistro(){
+    //Aplicar los campos del cliente siguiendo la logica de el array
+    $datos = array('nombres' => $this->input->post('nombres'),
+      'apellidos' => $this->input->post('apellidos'),
+      'direccion' => $this->input->post('direccion'),
+      'telefono' => $this->input->post('telefono'),
+      'email' => $this->input->post('email'),
+      'estado' => $this->input->post('estado')
+    );
+
+    $affected = $this->Cliente_m->insert_cliente($datos);
+
+    $data = array('msj' => "Registro agregado");
+    echo json_encode($data);
+  }
+
+
+
+  
+
 }
 
 ?>

@@ -114,10 +114,6 @@
 					<td>Nelson Gabriel Guevara Linares</td>
 					<td>195121</td>
 				</tr>
-			  <tr>
-				  <td>Manuel de Jes&uacute;s M&eacute;ndez Moreira</td>
-				  <td>202321</td>
-			  </tr>
 				<tr>
 					<td>Ra&uacute;l Alberto P&eacute;rez Hern&aacute;ndez</td>
 					<td>197321</td>
